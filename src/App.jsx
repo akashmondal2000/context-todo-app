@@ -4,7 +4,7 @@ const App = ()=> {
 
   return (
  <div>
-  <h1>hii</h1>
+  <p className=" textsize">hii</p>
  </div>
   );
 }
