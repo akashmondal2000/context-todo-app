@@ -12,7 +12,7 @@ export const TodoContext = createContext({
   addTodo : (todo)=>{},
   updateTodo : (id,todo)=>{},
   deleteTodo : (id)=>{},
-  toggleCompete : (id)=>{}  
+  toggleCompete : (id)=>{},  
 });
 
 export const useTodo = () => {
