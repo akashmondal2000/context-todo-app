@@ -17,7 +17,7 @@ const TodoItem = ({ todo }) => {
   return (
     <div
       className={`flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${
-        todo.completed ? "bg-[#c6e9a7]" : "bg-[#ccbed7]"
+        todo.completed ? "bg-[#65ee70]" : "bg-[#ccbed7]"
       }`}
     >
       <input
@@ -47,14 +47,18 @@ const TodoItem = ({ todo }) => {
         }}
         disabled={todo.completed}
       >
-        {isTodoEditable ? "📁" : "✏️"}
+        {isTodoEditable ? 
+          <img src="/images/bookmark.png" alt="save" className=" w-4 h-4" />
+        : 
+          <img src="/images/edit.png" alt="save" className=" w-4 h-4" />
+        }
       </button>
       {/* Delete Todo Button */}
       <button
         className="inline-flex w-8 h-8 rounded-lg text-sm border border-black/10 justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0"
         onClick={() => deleteTodo(todo.id)}
       >
-        ❌
+        {<img src="/images/delete.png" alt="save" className=" w-4 h-4" />}
       </button>
     </div>
   );
